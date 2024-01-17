@@ -679,6 +679,15 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </p.Stack>
             </div>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__d9PAx
+              )}
+            >
+              {"Enter some text"}
+            </div>
           </section>
         </div>
       </div>
