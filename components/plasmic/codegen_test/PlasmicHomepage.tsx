@@ -37,6 +37,8 @@ import {
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
 import Button2 from "../../Button2"; // plasmic-import: em5pq9h6I4kZ/component
+import { HelloWorld } from "@/src/components/hello-world"; // plasmic-import: xjWhPDKdG_Vo/codeComponent
+import { TestComponent } from "@/src/components/test-component"; // plasmic-import: uCpbBf3irOog/codeComponent
 
 import { useScreenVariants as useScreenVariantsn8YPem9Ky5 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: _N8Y_PEM9KY5/globalVariant
 
@@ -66,6 +68,8 @@ export type PlasmicHomepage__OverridesType = {
   root?: p.Flex<"div">;
   section?: p.Flex<"section">;
   h1?: p.Flex<"h1">;
+  helloWorld?: p.Flex<typeof HelloWorld>;
+  testComponent?: p.Flex<typeof TestComponent>;
 };
 
 export interface DefaultHomepageProps {}
@@ -679,16 +683,17 @@ function PlasmicHomepage__RenderFunc(props: {
                 </div>
               </p.Stack>
             </div>
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__d9PAx
-              )}
-            >
-              {"Enter some text"}
-            </div>
+            <HelloWorld
+              data-plasmic-name={"helloWorld"}
+              data-plasmic-override={overrides.helloWorld}
+              className={classNames("__wab_instance", sty.helloWorld)}
+            />
           </section>
+          <TestComponent
+            data-plasmic-name={"testComponent"}
+            data-plasmic-override={overrides.testComponent}
+            className={classNames("__wab_instance", sty.testComponent)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -696,9 +701,11 @@ function PlasmicHomepage__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "section", "h1"],
-  section: ["section", "h1"],
-  h1: ["h1"]
+  root: ["root", "section", "h1", "helloWorld", "testComponent"],
+  section: ["section", "h1", "helloWorld"],
+  h1: ["h1"],
+  helloWorld: ["helloWorld"],
+  testComponent: ["testComponent"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -707,6 +714,8 @@ type NodeDefaultElementType = {
   root: "div";
   section: "section";
   h1: "h1";
+  helloWorld: typeof HelloWorld;
+  testComponent: typeof TestComponent;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -771,6 +780,8 @@ export const PlasmicHomepage = Object.assign(
     // Helper components rendering sub-elements
     section: makeNodeComponent("section"),
     h1: makeNodeComponent("h1"),
+    helloWorld: makeNodeComponent("helloWorld"),
+    testComponent: makeNodeComponent("testComponent"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,
