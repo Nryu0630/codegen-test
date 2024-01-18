@@ -688,6 +688,43 @@ function PlasmicHomepage__RenderFunc(props: {
               data-plasmic-override={overrides.helloWorld}
               className={classNames("__wab_instance", sty.helloWorld)}
             />
+            <HelloWorld
+              data-plasmic-name={"helloWorld"}
+              data-plasmic-override={overrides.helloWorld}
+              className={classNames("__wab_instance", sty.helloWorld)}
+            />
+
+            <Button2
+              className={classNames("__wab_instance", sty.button2___0JFic)}
+              onClick={async event => {
+                const $steps = {};
+
+                $steps["goToNewPage"] = true
+                  ? (() => {
+                      const actionArgs = { destination: `/new-page` };
+                      return (({ destination }) => {
+                        if (
+                          typeof destination === "string" &&
+                          destination.startsWith("#")
+                        ) {
+                          document
+                            .getElementById(destination.substr(1))
+                            .scrollIntoView({ behavior: "smooth" });
+                        } else {
+                          __nextRouter?.push(destination);
+                        }
+                      })?.apply(null, [actionArgs]);
+                    })()
+                  : undefined;
+                if (
+                  $steps["goToNewPage"] != null &&
+                  typeof $steps["goToNewPage"] === "object" &&
+                  typeof $steps["goToNewPage"].then === "function"
+                ) {
+                  $steps["goToNewPage"] = await $steps["goToNewPage"];
+                }
+              }}
+            />
           </section>
           <TestComponent
             data-plasmic-name={"testComponent"}

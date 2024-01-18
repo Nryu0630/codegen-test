@@ -55,6 +55,20 @@
           "scheme": "blackbox",
           "componentType": "component",
           "plumeType": "button"
+        },
+        {
+          "id": "FjW2-b9kQnJx",
+          "name": "NewPage",
+          "type": "managed",
+          "projectId": "2ew29zVUVzMA97Y9ABseMT",
+          "renderModuleFilePath": "plasmic/codegen_test/PlasmicNewPage.tsx",
+          "importSpec": {
+            "modulePath": "../pages/new-page.tsx"
+          },
+          "cssFilePath": "plasmic/codegen_test/PlasmicNewPage.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/new-page"
         }
       ],
       "icons": [

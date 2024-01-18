@@ -863,6 +863,22 @@
   object-fit: cover;
   position: relative;
 }
+.button2___0JFic:global(.__wab_instance) {
+  max-width: 100%;
+  position: relative;
+}
+.svg__cgzH {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
+.svg__g4Fis {
+  position: relative;
+  object-fit: cover;
+  width: auto;
+  height: 1em;
+}
 .testComponent:global(.__wab_instance) {
   max-width: 100%;
   object-fit: cover;
