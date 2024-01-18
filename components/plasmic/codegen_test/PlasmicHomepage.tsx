@@ -688,37 +688,77 @@ function PlasmicHomepage__RenderFunc(props: {
               data-plasmic-override={overrides.helloWorld}
               className={classNames("__wab_instance", sty.helloWorld)}
             />
-            <Button2
-              className={classNames("__wab_instance", sty.button2___0JFic)}
-              onClick={async event => {
-                const $steps = {};
 
-                $steps["goToNewPage"] = true
-                  ? (() => {
-                      const actionArgs = { destination: `/new-page` };
-                      return (({ destination }) => {
-                        if (
-                          typeof destination === "string" &&
-                          destination.startsWith("#")
-                        ) {
-                          document
-                            .getElementById(destination.substr(1))
-                            .scrollIntoView({ behavior: "smooth" });
-                        } else {
-                          __nextRouter?.push(destination);
-                        }
-                      })?.apply(null, [actionArgs]);
-                    })()
-                  : undefined;
-                if (
-                  $steps["goToNewPage"] != null &&
-                  typeof $steps["goToNewPage"] === "object" &&
-                  typeof $steps["goToNewPage"].then === "function"
-                ) {
-                  $steps["goToNewPage"] = await $steps["goToNewPage"];
-                }
-              }}
-            />
+            <div className={classNames(projectcss.all, sty.columns__lX0Nt)}>
+              <div className={classNames(projectcss.all, sty.column__uYvwz)}>
+                <Button2
+                  className={classNames("__wab_instance", sty.button2___0JFic)}
+                  onClick={async event => {
+                    const $steps = {};
+
+                    $steps["goToNewPage"] = true
+                      ? (() => {
+                          const actionArgs = { destination: `/new-page` };
+                          return (({ destination }) => {
+                            if (
+                              typeof destination === "string" &&
+                              destination.startsWith("#")
+                            ) {
+                              document
+                                .getElementById(destination.substr(1))
+                                .scrollIntoView({ behavior: "smooth" });
+                            } else {
+                              __nextRouter?.push(destination);
+                            }
+                          })?.apply(null, [actionArgs]);
+                        })()
+                      : undefined;
+                    if (
+                      $steps["goToNewPage"] != null &&
+                      typeof $steps["goToNewPage"] === "object" &&
+                      typeof $steps["goToNewPage"].then === "function"
+                    ) {
+                      $steps["goToNewPage"] = await $steps["goToNewPage"];
+                    }
+                  }}
+                />
+              </div>
+              <div
+                className={classNames(projectcss.all, sty.column___7DRd6)}
+                onClick={async event => {
+                  const $steps = {};
+
+                  $steps["goToNewPage2"] = true
+                    ? (() => {
+                        const actionArgs = { destination: `/new-page-2` };
+                        return (({ destination }) => {
+                          if (
+                            typeof destination === "string" &&
+                            destination.startsWith("#")
+                          ) {
+                            document
+                              .getElementById(destination.substr(1))
+                              .scrollIntoView({ behavior: "smooth" });
+                          } else {
+                            __nextRouter?.push(destination);
+                          }
+                        })?.apply(null, [actionArgs]);
+                      })()
+                    : undefined;
+                  if (
+                    $steps["goToNewPage2"] != null &&
+                    typeof $steps["goToNewPage2"] === "object" &&
+                    typeof $steps["goToNewPage2"].then === "function"
+                  ) {
+                    $steps["goToNewPage2"] = await $steps["goToNewPage2"];
+                  }
+                }}
+              >
+                <Button2
+                  className={classNames("__wab_instance", sty.button2__jyvsq)}
+                />
+              </div>
+            </div>
           </section>
           <TestComponent
             data-plasmic-name={"testComponent"}

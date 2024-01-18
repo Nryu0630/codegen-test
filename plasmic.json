@@ -69,6 +69,20 @@
           "scheme": "blackbox",
           "componentType": "page",
           "path": "/new-page"
+        },
+        {
+          "id": "7NXgpPzYmcyQ",
+          "name": "NewPage2",
+          "type": "managed",
+          "projectId": "2ew29zVUVzMA97Y9ABseMT",
+          "renderModuleFilePath": "plasmic/codegen_test/PlasmicNewPage2.tsx",
+          "importSpec": {
+            "modulePath": "../pages/new-page-2.tsx"
+          },
+          "cssFilePath": "plasmic/codegen_test/PlasmicNewPage2.module.css",
+          "scheme": "blackbox",
+          "componentType": "page",
+          "path": "/new-page-2"
         }
       ],
       "icons": [
