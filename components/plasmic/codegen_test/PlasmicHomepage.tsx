@@ -688,12 +688,6 @@ function PlasmicHomepage__RenderFunc(props: {
               data-plasmic-override={overrides.helloWorld}
               className={classNames("__wab_instance", sty.helloWorld)}
             />
-            <HelloWorld
-              data-plasmic-name={"helloWorld"}
-              data-plasmic-override={overrides.helloWorld}
-              className={classNames("__wab_instance", sty.helloWorld)}
-            />
-
             <Button2
               className={classNames("__wab_instance", sty.button2___0JFic)}
               onClick={async event => {
