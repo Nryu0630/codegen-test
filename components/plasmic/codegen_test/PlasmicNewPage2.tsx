@@ -36,9 +36,12 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants
 } from "@plasmicapp/react-web";
+import { HelloWorld } from "@/src/components/hello-world"; // plasmic-import: xjWhPDKdG_Vo/codeComponent
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
+import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic_antd_5_hostless.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
+import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic_plasmic_rich_components.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic_codegen_test.module.css"; // plasmic-import: 2ew29zVUVzMA97Y9ABseMT/projectcss
 import sty from "./PlasmicNewPage2.module.css"; // plasmic-import: 7NXgpPzYmcyQ/css
 
@@ -56,6 +59,8 @@ export const PlasmicNewPage2__ArgProps = new Array<ArgPropType>();
 export type PlasmicNewPage2__OverridesType = {
   root?: p.Flex<"div">;
   h1?: p.Flex<"h1">;
+  text?: p.Flex<"div">;
+  helloWorld?: p.Flex<typeof HelloWorld>;
 };
 
 export interface DefaultNewPage2Props {}
@@ -113,6 +118,8 @@ function PlasmicNewPage2__RenderFunc(props: {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
+            plasmic_antd_5_hostless_css.plasmic_tokens,
+            plasmic_plasmic_rich_components_css.plasmic_tokens,
             sty.root
           )}
         >
@@ -128,6 +135,24 @@ function PlasmicNewPage2__RenderFunc(props: {
           >
             {"Page 2"}
           </h1>
+          <div
+            data-plasmic-name={"text"}
+            data-plasmic-override={overrides.text}
+            className={classNames(
+              projectcss.all,
+              projectcss.__wab_text,
+              sty.text
+            )}
+          >
+            {
+              "Enter some text\n1\n1\n1\n1\n1\n1wwwwwddwwdwddwdwwdwddwwddwdwwd\n1\n1w\n11111\n33333333333333333333333333333\n12222222222222"
+            }
+          </div>
+          <HelloWorld
+            data-plasmic-name={"helloWorld"}
+            data-plasmic-override={overrides.helloWorld}
+            className={classNames("__wab_instance", sty.helloWorld)}
+          />
         </div>
       </div>
     </React.Fragment>
@@ -135,8 +160,10 @@ function PlasmicNewPage2__RenderFunc(props: {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "h1"],
-  h1: ["h1"]
+  root: ["root", "h1", "text", "helloWorld"],
+  h1: ["h1"],
+  text: ["text"],
+  helloWorld: ["helloWorld"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
@@ -144,6 +171,8 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   h1: "h1";
+  text: "div";
+  helloWorld: typeof HelloWorld;
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -207,6 +236,8 @@ export const PlasmicNewPage2 = Object.assign(
   {
     // Helper components rendering sub-elements
     h1: makeNodeComponent("h1"),
+    text: makeNodeComponent("text"),
+    helloWorld: makeNodeComponent("helloWorld"),
 
     // Metadata about props expected for PlasmicNewPage2
     internalVariantProps: PlasmicNewPage2__VariantProps,

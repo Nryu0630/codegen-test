@@ -28,3 +28,38 @@
   max-width: 100%;
   min-width: 0;
 }
+.table:global(.__wab_instance) {
+  width: 1054px;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  position: relative;
+  height: 273px;
+  margin-right: 81px;
+  justify-self: auto;
+  padding: 16px;
+}
+.testProps__jFhG:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.testComponent__hciK7:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.testProps__cdA8:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.testComponent___7D6Lv:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+}
+.testComponent__nW7QF:global(.__wab_instance) {
+  max-width: 100%;
+  object-fit: cover;
+  position: relative;
+}
